@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Parameter Viewer</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the value of the 'text' query parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const textParam = urlParams.get('text');
+
+            // Display the value on the webpage
+            const outputElement = document.getElementById('output');
+            outputElement.textContent = textParam || 'No query parameter found';
+        });
+    </script>
+</head>
+<body>
+    <h1>Query Parameter Viewer</h1>
+    <p>Value of 'text' query parameter: <span id="output"></span></p>
+</body>
+</html>
